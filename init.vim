@@ -1,13 +1,12 @@
 " ===
 " ===Auto load for first time user
 " ===
-if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
-    silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-	https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+if empty(glob('~/.config/nvim/autoload/plug.vim'))
+    silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-call plug#begin('~/.local/share/nvim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 
 Plug 'vim-airline/vim-airline'
 Plug 'jiangmiao/auto-pairs'
@@ -16,18 +15,18 @@ Plug 'scrooloose/nerdtree'
 Plug 'machakann/vim-highlightedyank'
 Plug 'vim-scripts/indentpython.vim'
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'deoplete-plugins/deoplete-jedi'
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'deoplete-plugins/deoplete-jedi'
 Plug 'morhetz/gruvbox'
 Plug 'Yggdroot/indentLine'
 
 call plug#end()
 
 " deoplete
-let g:deoplete#enable_at_startup=1
-inoremap <expr><tab> pumvisible() ? "\<c-p>" : "\<tab>"
-autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
-set splitbelow
+" let g:deoplete#enable_at_startup=1
+" inoremap <expr><tab> pumvisible() ? "\<c-p>" : "\<tab>"
+" autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+" set splitbelow
 
 " vim-highlightedyank
 hi HighlightedyankRegion cterm=reverse gui=reverse
@@ -58,7 +57,7 @@ set autoindent
 set smartindent
 set incsearch
 set clipboard+=unnamed
-set paste
+" set paste
 
 filetype on
 filetype plugin on
