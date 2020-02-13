@@ -57,6 +57,7 @@ set autoindent
 set smartindent
 set incsearch
 set clipboard+=unnamed
+set vb t_vb=
 " set paste
 
 filetype on
@@ -76,6 +77,6 @@ vnoremap <C-j> :m '>+1<CR>gv=gv
 nnoremap <C-k> :m .-2<CR>==
 vnoremap <C-k> :m '<-2<CR>gv=gv
 
-colorscheme gruvbox
+" colorscheme gruvbox
 
-let g:python3_host_prog="/bin/python3"
+" let g:python3_host_prog="/bin/python3"
