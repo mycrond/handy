@@ -6,6 +6,10 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
     autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+if has("gui_running")
+    set guifont=SourceCodeProBoldforPowerline:h16:b
+endif
+
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'vim-airline/vim-airline'
@@ -21,6 +25,9 @@ Plug 'morhetz/gruvbox'
 Plug 'Yggdroot/indentLine'
 
 call plug#end()
+
+" enable powerline fonts
+" let g:airline_powerline_fonts = 1
 
 " deoplete
 " let g:deoplete#enable_at_startup=1
@@ -50,6 +57,9 @@ set cuc
 set wrap
 set ignorecase
 set shiftwidth=4
+set tabstop=4
+set softtabstop=4
+set expandtab
 set cc=80
 set scrolloff=3
 set ruler
@@ -57,8 +67,11 @@ set autoindent
 set smartindent
 set incsearch
 set clipboard+=unnamed
-set vb t_vb=
 " set paste
+set vb t_vb=
+
+" Show the statusline
+" set laststatus=2
 
 filetype on
 filetype plugin on
