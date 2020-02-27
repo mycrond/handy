@@ -3,7 +3,7 @@
 " ===
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
     silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+    autocmd VimEnter * PlugInstall --sync 
 endif
 
 if has("gui_running")
@@ -19,8 +19,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'machakann/vim-highlightedyank'
 Plug 'vim-scripts/indentpython.vim'
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
-" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" Plug 'deoplete-plugins/deoplete-jedi'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'deoplete-plugins/deoplete-jedi'
 Plug 'morhetz/gruvbox'
 Plug 'Yggdroot/indentLine'
 
@@ -30,10 +30,10 @@ call plug#end()
 " let g:airline_powerline_fonts = 1
 
 " deoplete
-" let g:deoplete#enable_at_startup=1
-" inoremap <expr><tab> pumvisible() ? "\<c-p>" : "\<tab>"
-" autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
-" set splitbelow
+let g:deoplete#enable_at_startup=1
+inoremap <expr><tab> pumvisible() ? "\<c-p>" : "\<tab>"
+autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
+set splitbelow
 
 " vim-highlightedyank
 hi HighlightedyankRegion cterm=reverse gui=reverse
@@ -53,15 +53,15 @@ let g:NERDCommentEmptyLines=1
 
 set nu
 set cul
-set cuc
-set wrap
+" set cuc
+set nowrap
 set ignorecase
 set shiftwidth=4
 set tabstop=4
 set softtabstop=4
 set expandtab
 set cc=80
-set scrolloff=3
+set scrolloff=6
 set ruler
 set autoindent
 set smartindent
@@ -71,7 +71,7 @@ set clipboard+=unnamed
 set vb t_vb=
 
 " Show the statusline
-" set laststatus=2
+set laststatus=2
 
 filetype on
 filetype plugin on
