@@ -1,0 +1,263 @@
+
+// To view the default settings, hold "alt" while clicking on the "Settings" button.
+// For documentation on these settings, see: https://aka.ms/terminal-documentation
+
+{
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+
+    "defaultProfile": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+    "initialCols": 82,
+    "initialRows": 25,
+	
+    "profiles":
+    {
+        "defaults":
+        {
+            // Put settings here that you want to apply to all profiles
+		
+        },
+        "list":
+        [
+            {
+                // Make changes here to the powershell.exe profile
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "name": "Windows PowerShell",
+                "commandline": "powershell.exe",
+                "hidden": false
+            },
+            {
+                // Make changes here to the cmd.exe profile
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "name": "cmd",
+                "commandline": "cmd.exe",
+                "hidden": false
+            },
+            {
+		// Make changes here to the Wsl
+                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+                "hidden": false,
+                "name": "Ubuntu",
+                "source": "Windows.Terminal.Wsl",
+		"colorScheme": "Campbell",
+		"startingDirectory": "//wsl$/Ubuntu/home/lay",
+		"acrylicOpacity": 0.7,
+   		"useAcrylic": true,
+		"snapOnInput": true,
+		"padding": "0, 0, 0, 0",
+		"cursorShape": "filledBox",
+		"fontFace": "Cascadia Code",
+		"fontSize": 12
+            },
+            {
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+                "hidden": true,
+                "name": "Azure Cloud Shell",
+                "source": "Windows.Terminal.Azure"
+            }
+        ]
+    },
+
+    // Add custom color schemes to this array
+    "schemes": [
+    {
+      "name": "Ubuntu",
+      "foreground": "#EEEEEC",
+      "background": "#2C001E",
+      "colors": [
+        "#EEEEEC",
+        "#16C60C",
+        "#729FCF",
+        "#B58900",
+        "#268BD2",
+        "#D33682",
+        "#2AA198",
+        "#EEE8D5",
+        "#002B36",
+        "#CB4B16",
+        "#586E75",
+        "#657B83",
+        "#839496",
+        "#6C71C4",
+        "#93A1A1",
+        "#FDF6E3"
+      ]
+    },
+    {
+      "name": "UbuntuLegit",
+      "foreground": "#EEEEEE",
+      "background": "#2C001E",
+      "colors": [
+        "#4E9A06",
+        "#CC0000",
+        "#300A24",
+        "#C4A000",
+        "#3465A4",
+        "#75507B",
+        "#06989A",
+        "#D3D7CF",
+        "#555753",
+        "#EF2929",
+        "#8AE234",
+        "#FCE94F",
+        "#729FCF",
+        "#AD7FA8",
+        "#34E2E2",
+        "#EEEEEE"
+      ]
+    },
+
+    {
+        "name": "Campbell",
+        "foreground": "#CCCCCC",
+        "background": "#0C0C0C",
+        "black": "#0C0C0C",
+        "red": "#C50F1F",
+        "green": "#13A10E",
+        "yellow": "#C19C00",
+        "blue": "#0037DA",
+        "purple": "#881798",
+        "cyan": "#3A96DD",
+        "white": "#CCCCCC",
+        "brightBlack": "#767676",
+        "brightRed": "#E74856",
+        "brightGreen": "#16C60C",
+        "brightYellow": "#F9F1A5",
+        "brightBlue": "#3B78FF",
+        "brightPurple": "#B4009E",
+        "brightCyan": "#61D6D6",
+        "brightWhite": "#F2F2F2"
+    },
+    {
+        "name": "Campbell Powershell",
+        "foreground": "#CCCCCC",
+        "background": "#012456",
+        "black": "#0C0C0C",
+        "red": "#C50F1F",
+        "green": "#13A10E",
+        "yellow": "#C19C00",
+        "blue": "#0037DA",
+        "purple": "#881798",
+        "cyan": "#3A96DD",
+        "white": "#CCCCCC",
+        "brightBlack": "#767676",
+        "brightRed": "#E74856",
+        "brightGreen": "#16C60C",
+        "brightYellow": "#F9F1A5",
+        "brightBlue": "#3B78FF",
+        "brightPurple": "#B4009E",
+        "brightCyan": "#61D6D6",
+        "brightWhite": "#F2F2F2"
+    },
+    {
+        "name": "Vintage",
+        "foreground": "#C0C0C0",
+        "background": "#000000",
+        "black": "#000000",
+        "red": "#800000",
+        "green": "#008000",
+        "yellow": "#808000",
+        "blue": "#000080",
+        "purple": "#800080",
+        "cyan": "#008080",
+        "white": "#C0C0C0",
+        "brightBlack": "#808080",
+        "brightRed": "#FF0000",
+        "brightGreen": "#00FF00",
+        "brightYellow": "#FFFF00",
+        "brightBlue": "#0000FF",
+        "brightPurple": "#FF00FF",
+        "brightCyan": "#00FFFF",
+        "brightWhite": "#FFFFFF"
+    },
+    {
+        "name": "One Half Dark",
+        "foreground": "#DCDFE4",
+        "background": "#282C34",
+        "black": "#282C34",
+        "red": "#E06C75",
+        "green": "#98C379",
+        "yellow": "#E5C07B",
+        "blue": "#61AFEF",
+        "purple": "#C678DD",
+        "cyan": "#56B6C2",
+        "white": "#DCDFE4",
+        "brightBlack": "#5A6374",
+        "brightRed": "#E06C75",
+        "brightGreen": "#98C379",
+        "brightYellow": "#E5C07B",
+        "brightBlue": "#61AFEF",
+        "brightPurple": "#C678DD",
+        "brightCyan": "#56B6C2",
+        "brightWhite": "#DCDFE4"
+    },
+    {
+        "name": "One Half Light",
+        "foreground": "#383A42",
+        "background": "#FAFAFA",
+        "black": "#383A42",
+        "red": "#E45649",
+        "green": "#50A14F",
+        "yellow": "#C18301",
+        "blue": "#0184BC",
+        "purple": "#A626A4",
+        "cyan": "#0997B3",
+        "white": "#FAFAFA",
+        "brightBlack": "#4F525D",
+        "brightRed": "#DF6C75",
+        "brightGreen": "#98C379",
+        "brightYellow": "#E4C07A",
+        "brightBlue": "#61AFEF",
+        "brightPurple": "#C577DD",
+        "brightCyan": "#56B5C1",
+        "brightWhite": "#FFFFFF"
+    },
+    {
+        "name": "Solarized Dark",
+        "foreground": "#839496",
+        "background": "#002B36",
+        "black": "#073642",
+        "red": "#DC322F",
+        "green": "#859900",
+        "yellow": "#B58900",
+        "blue": "#268BD2",
+        "purple": "#D33682",
+        "cyan": "#2AA198",
+        "white": "#EEE8D5",
+        "brightBlack": "#002B36",
+        "brightRed": "#CB4B16",
+        "brightGreen": "#586E75",
+        "brightYellow": "#657B83",
+        "brightBlue": "#839496",
+        "brightPurple": "#6C71C4",
+        "brightCyan": "#93A1A1",
+        "brightWhite": "#FDF6E3"
+    },
+    {
+        "name": "Solarized Light",
+        "foreground": "#657B83",
+        "background": "#FDF6E3",
+        "black": "#073642",
+        "red": "#DC322F",
+        "green": "#859900",
+        "yellow": "#B58900",
+        "blue": "#268BD2",
+        "purple": "#D33682",
+        "cyan": "#2AA198",
+        "white": "#EEE8D5",
+        "brightBlack": "#002B36",
+        "brightRed": "#CB4B16",
+        "brightGreen": "#586E75",
+        "brightYellow": "#657B83",
+        "brightBlue": "#839496",
+        "brightPurple": "#6C71C4",
+        "brightCyan": "#93A1A1",
+        "brightWhite": "#FDF6E3"
+    }
+],
+
+    // Add any keybinding overrides to this array.
+    // To unbind a default keybinding, set the command to "unbound"
+    "keybindings": [
+    {"command": "closeTab", "keys": ["ctrl+w"]}
+    ]
+}
