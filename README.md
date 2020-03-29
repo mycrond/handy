@@ -1,2 +1,2 @@
 # handy
-personal use
+My dotfiles
