@@ -1,4 +1,0 @@
-URxvt.font: xft:SauceCodePro Nerd Font:semibole,regular:size=16
-URxvt.scrollBar: False
-URxvt.cursorBlink: true
-#URxvt.borderLess: True
